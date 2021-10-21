@@ -1,7 +1,695 @@
 <!DOCTYPE html>
-<html>
-    <body>
-        <title>Book King</title>
-        <h1>Book King</h1>
-    </body>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <title>Book King</title>
+
+
+</head>
+
+<body>
+
+    <header class="jumbotron">
+        <div class="container-fluid">
+            <div class= "row">
+                <div class="col-2 col-lg-1 align-self-center">
+                    <img src="img/book-king-logo.png" class="img-fluid">
+                </div>
+                <div class="col-1  align-self-center">
+                    <h1>Book King</h1>
+                    <h2></h2>
+                </div>
+        
+                <li class="nav-item  dropdown order-last order-md-0 col-1 ml-1 mr-4 align-self-center">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                    <div class="row" style="width: 900px;">
+                        <div class="col">
+                            <a class="dropdown-item" href="#">Used Books</a>
+                            <a class="dropdown-item" href="#">New Books</a>
+                            <a class="dropdown-item" href="#">Bargain Bin</a>
+                            <a class="dropdown-item" href="#">Textbooks</a>
+                            <a class="dropdown-item" href="#">Gift Certificates</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Arts & Architecture</a>
+                            <a class="dropdown-item" href="#">Audio, DVD & Music</a>
+                            <a class="dropdown-item" href="#">Biography & Memoir</a>
+                            <a class="dropdown-item" href="#">Body, Mind & Spirit</a>
+                            <a class="dropdown-item" href="#">Business</a>
+                            <a class="dropdown-item" href="#">Children's</a>
+                            <a class="dropdown-item" href="#">Computer & Technology</a>
+                        </div>
+                        <div class="col">
+                            <a class="dropdown-item" href="#">Cookbooks & Wine</a>
+                            <a class="dropdown-item" href="#">Crafts & Hobbies</a>
+                            <a class="dropdown-item" href="#">Education</a>
+                            <a class="dropdown-item" href="#">Fiction</a>
+                            <a class="dropdown-item" href="#">Health & Fitness</a>
+                            <a class="dropdown-item" href="#">History</a>
+                            <a class="dropdown-item" href="#">Home & Garden</a>
+                            <a class="dropdown-item" href="#">Horror</a>
+                            <a class="dropdown-item" href="#">Large Print</a>
+                            <a class="dropdown-item" href="#">Manga & Graphic Novels</a>
+                            <a class="dropdown-item" href="#">Medical & Nursing</a>
+                            <a class="dropdown-item" href="#">Mystery & Thrillers</a>
+                            <a class="dropdown-item" href="#">Family & Relationships</a>
+                        </div>
+                        <div class="col">
+                            <a class="dropdown-item" href="#">Psychology</a>
+                            <a class="dropdown-item" href="#">Poetry</a>
+                            <a class="dropdown-item" href="#">Political Science</a>
+                            <a class="dropdown-item" href="#">Religion</a>
+                            <a class="dropdown-item" href="#">Romance</a>
+                            <a class="dropdown-item" href="#">Science Fiction</a>
+                            <a class="dropdown-item" href="#">Self Help</a>
+                            <a class="dropdown-item" href="#">Social Science</a>
+                            <a class="dropdown-item" href="#">Sports & Recreation</a>
+                            <a class="dropdown-item" href="#">Travel</a>
+                            <a class="dropdown-item" href="#">True Crime</a>
+                            <a class="dropdown-item" href="#">Young Adult</a>
+                        </div>
+                    </div>
+                </li>
+
+                <div class="input-group col-9 col-md-4 order-12 order-md-8 align-self-center">
+                    <div class="form-outline">
+                      <input id="search-focus" type="search" id="form1" class="form-control" placeholder="Search" /> 
+                    </div>
+                    <button type="button" class="btn btn-info">
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </div>
+
+<!--
+                    <div class="col align-self-center">
+                            <input type="text" class="form-control" id="searchBar" name="searchBar" placeholder="Search" />
+                           
+                        </div>
+                    -->
+                    <div class="col-6 col-md-5 col-lg-4 offset-md-2 order-md-3 order-lg-9 ml-5 align-self-center">
+                        <span class="navbar-text ml-auto">
+                            <a role="button"  class="btn btn-info" data-toggle="modal" data-target="#loginModal">
+                                <i class="fa fa-sign-in"></i> Login
+                            </a>
+                        </span>
+                        <a href="#reserveForm" role="button" class="btn btn-info">My Account</a>
+                        <a href="#reserveForm" role="button" class="btn btn-info"><i class="fa fa-shopping-cart"></i></a>
+                        <a href="#reserveForm" role="button" class="btn btn-info"><i class="fa fa-info""></i>                    </a>
+                    </div>
+                </div>
+                                
+                   
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Login</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="loginEmail">Email address</label>
+                                    <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
+                                </div>
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="loginPassword">Password</label>
+                                    <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label"> Remember me</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="off-site-menu">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Menu</h3>
+            </div>
+            <ul class="list-unstyled components">
+                <div class="row">
+                    <li class="active"></li>
+                    <div class="col-2 custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">All Product Types</label>
+                      </div>
+                    </li>   
+                </div>
+                
+                <div class="row">
+                    <li class="active"></li>
+                    <div class="col-2 custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Books</label>
+                      </div>
+                    </li>   
+                </div>
+                
+                <div class="row">
+                    <li class="active"></li>
+                    <div class="col-2 custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Magazines</label>
+                      </div>
+                    </li>   
+                </div>
+                <div class="row">
+                    <li class="active"></li>
+                    <div class="col-2 custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Comics</label>
+                      </div>
+                    </li>   
+                </div>
+                <div class="row">
+                    <li class="active"></li>
+                    <div class="col-2 custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Collectibles</label>
+                      </div>
+                    </li>   
+                </div>
+
+<!--need to include a row here for Condition-->
+
+                <div class="row">
+                    <li class="active"></li>
+                    <div class="col-2 custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">All Conditions</label>
+                      </div>
+                    </li>   
+                </div>
+                <div class="row">
+                    <li class="active"></li>
+                    <div class="col-2 custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">New</label>
+                      </div>
+                    </li>   
+                </div>
+                <div class="row">
+                    <li class="active"></li>
+                    <div class="col-2 custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Used</label>
+                      </div>
+                    </li>   
+                </div>
+
+                <!--need to include a row here for Binding-->
+
+                <div class="row">
+                    <li class="active"></li>
+                    <div class="col-2 custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">All Bindings</label>
+                      </div>
+                    </li>   
+                </div>
+                <div class="row">
+                    <li class="active"></li>
+                    <div class="col-2 custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Hardcover</label>
+                      </div>
+                    </li>   
+                </div>
+                <div class="row">
+                    <li class="active"></li>
+                    <div class="col-2 custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Softcover</label>
+                      </div>
+                    </li>   
+                </div>
+
+                <!--need to include a row here for shipping or just a space-->
+
+                <div class="row">
+                    <li class="active"></li>
+                    <div class="col-2 custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Free Shipping</label>
+                      </div>
+                    </li>   
+                </div>
+                <!--need to include a row here for Seller rating-->
+
+                <div class="row">
+                    <li class="active"></li>
+                    <div class="col-2 custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">All Sellers</label>
+                      </div>
+                    </li>   
+                </div>
+                <div class="row">
+                    <li class="active"></li>
+                    <div class="col-2 custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">One Star</label>
+                      </div>
+                    </li>   
+                </div>
+                <div class="row">
+                    <li class="active"></li>
+                    <div class="col-2 custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Two Stars</label>
+                      </div>
+                    </li>   
+                </div>
+                <div class="row">
+                    <li class="active"></li>
+                    <div class="col-2 custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Three Stars</label>
+                      </div>
+                    </li>   
+                </div>
+                <div class="row">
+                    <li class="active"></li>
+                    <div class="col-2 custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Four Stars</label>
+                      </div>
+                    </li>   
+                </div>
+                <div class="row">
+                    <li class="active"></li>
+                    <div class="col-2 custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Five Stars</label>
+                      </div>
+                    </li>   
+                </div>
+                 
+                
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="container">
+
+        <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div>
+                    <button type="button" id="offSiteMenu" class="btn btn-info">
+                        <span>Menu</span>
+                    </button>
+                
+                </div>
+            </nav>
+        </div>
+
+    <div class="row">
+        <div class="card mr-4 mb-4" style="width: 16rem;">
+            <img src="img/blake.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">The Marrige of Heaven and Hell by William...</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5>$14.99</h5>
+                <a href="#" class="btn btn-primary mb-1">Add to Cart</a>
+                <a href="#" class="btn btn-primary">Add to Wishlist</a>
+    
+            </div>
+            </div>
+
+
+    <div class="card mr-4 mb-4" style="width: 16rem;">
+        <img src="img/expecting.jpg" class="card-img-top" alt="expecting">
+        <div class="card-body">
+            <h5 class="card-title">Expecting to Fly by Patrick Sheridan</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5>$14.99</h5>
+            <a href="#" class="btn btn-primary mb-1">Add to Cart</a>
+            <a href="#" class="btn btn-primary">Add to Wishlist</a>
+
+        </div>
+        </div>
+    <div class="card mr-4 mb-4" style="width: 16rem;">
+        <img src="img/peak.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Peak: Secrets from the New Science of...</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5>$24.99</h5>
+            <a href="#" class="btn btn-primary mb-1">Add to Cart</a>
+            <a href="#" class="btn btn-primary">Add to Wishlist</a>
+
+        </div>
+        </div>
+    
+        <div class="card mb-4" style="width: 16rem;">
+            <img src="img/ultralearning.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Ultralearning: Master Hard Skills, Outsmart...  </h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5>$19.99</h5>
+
+                <a href="#" class="btn btn-primary mb-1">Add to Cart</a>
+                <a href="#" class="btn btn-primary">Add to Wishlist</a>
+    
+            </div>
+            </div>
+    
+    </div>
+
+    <div class="row">
+        <div class="card mr-4 mb-4" style="width: 16rem;">
+            <img src="img/analects.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">The Analects by Confucius</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5>$14.99</h5>
+                <a href="#" class="btn btn-primary mb-1">Add to Cart</a>
+                <a href="#" class="btn btn-primary">Add to Wishlist</a>
+    
+            </div>
+            </div>
+        <div class="card mr-4 mb-4" style="width: 16rem;">
+            <img src="img/curious.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">A Curious Mind: The Secret to a Bigger...</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5>$19.99</h5>
+                <a href="#" class="btn btn-primary mb-1">Add to Cart</a>
+                <a href="#" class="btn btn-primary">Add to Wishlist</a>
+    
+            </div>
+            </div>
+
+            <div class="card mr-4 mb-4" style="width: 16rem;">
+                <img src="img/thewarofart.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">The War of Art: Break Through the Blocks...</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h5>$24.99</h5>
+                    <a href="#" class="btn btn-primary mb-1">Add to Cart</a>
+                    <a href="#" class="btn btn-primary">Add to Wishlist</a>
+        
+                </div>
+                </div>
+
+                
+        
+       
+            <div class="card mb-4" style="width: 16rem;">
+                <img src="img/dhammapada.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">The Dhammapada by Eknath Easwaran</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h5>$14.99</h5>
+
+                    <a href="#" class="btn btn-primary mb-1">Add to Cart</a>
+                    <a href="#" class="btn btn-primary">Add to Wishlist</a>
+        
+                </div>
+                </div>
+        
+        </div>
+
+
+    <div class="container">
+        <div class="row row-content">
+            <div class="col-md-8 mx-auto">
+                <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators bg-secondary ">
+                        <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#homeCarousel" data-slide-to="1"></li>
+                        <li data-target="#homeCarousel" data-slide-to="2"></li>
+                        <li data-target="#homeCarousel" data-slide-to="3"></li>
+
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="#">
+                            <img class="d-block w-100" src="img/10-epic-series.jpg" alt="Breadcrumb Trail Campground" />
+                            </a>
+
+                        </div>
+                    <div class="carousel-item">
+                        <a href="#">
+                        <img class="d-block w-100" src="img/learning-books.jpg" alt="React Lake Campground" />
+                        </a>
+                    </div>  
+                    <div class="carousel-item">
+                        <a href="#">
+                        <img class="d-block w-100" src="img/self-help-gems.jpg" alt="Chrome River Campground" />
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#">
+                        <img class="d-block w-100" src="img/YA-fiction.jpg" alt="Chrome River Campground" />
+                        </a>
+                    </div>
+                    
+                    <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon bg-secondary"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon bg-secondary"></span>
+                        <span class="sr-only">Next</span>
+                    </a>    
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+        
+
+   <div class="row">
+    <div class="card mr-4 mb-4" style="width: 16rem;">
+        <img src="img/jung.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Jung on Active Imagination by Carl...</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5>$34.99</h5>
+            <a href="#" class="btn btn-primary mb-1">Add to Cart</a>
+            <a href="#" class="btn btn-primary">Add to Wishlist</a>
+
+        </div>
+        </div>
+        <div class="card mr-4 mb-4" style="width: 16rem;">
+            <img src="img/tao-te-ching.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Tao Te Ching: The Book of The Way by Lao Tzu</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5>$19.99</h5>
+                <a href="#" class="btn btn-primary mb-1">Add to Cart</a>
+                <a href="#" class="btn btn-primary">Add to Wishlist</a>
+    
+            </div>
+            </div>
+
+
+    <div class="card mr-4 mb-4" style="width: 16rem;">
+        <img src="img/smart-notes.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">How to Take Smart Notes: One Simple...   </h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5>$24.99</h5>
+            <a href="#" class="btn btn-primary mb-1">Add to Cart</a>
+            <a href="#" class="btn btn-primary">Add to Wishlist</a>
+
+        </div>
+        </div>
+    <div class="card mb-4" style="width: 16rem;">
+        <img src="img/mastery.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Mastery by Robert Greene </h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5>$29.99</h5>
+            <a href="#" class="btn btn-primary mb-1">Add to Cart</a>
+            <a href="#" class="btn btn-primary">Add to Wishlist</a>
+
+        </div>
+        </div>
+    
+    
+    </div>
+
+    <div class="row">
+        <div class="card mr-4 mb-4" style="width: 16rem;">
+            <img src="img/ramayana.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Ramayana by Valmiki</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5>$14.99</h5>
+                <a href="#" class="btn btn-primary mb-1">Add to Cart</a>
+                <a href="#" class="btn btn-primary">Add to Wishlist</a>
+    
+            </div>
+            </div>
+
+            <div class="card mr-4 mb-4" style="width: 16rem;">
+                <img src="img/tools-of-titans.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Tools of Titans: The Tactics, Routines, and...</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h5>$29.99</h5>
+                    <a href="#" class="btn btn-primary mb-1">Add to Cart</a>
+                    <a href="#" class="btn btn-primary">Add to Wishlist</a>
+        
+                </div>
+                </div>
+
+           
+                <div class="card mr-4 mb-4" style="width: 16rem;">
+                    <img src="img/super-thinking.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Super Thinking: The Big Book of Mental...    </h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h5>$24.99</h5>
+
+                        <a href="#" class="btn btn-primary mb-1">Add to Cart</a>
+                        <a href="#" class="btn btn-primary">Add to Wishlist</a>
+            
+                    </div>
+                    </div>
+        
+                    <div class="card mr-4 mb-4" style="width: 16rem;">
+                        <img src="img/discipline.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Discipline Equals Freedom: Field...  </h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h5>$19.99</h5>
+                            <a href="#" class="btn btn-primary mb-1">Add to Cart</a>
+                            <a href="#" class="btn btn-primary">Add to Wishlist</a>
+                
+                        </div>
+                        </div>
+        
+                        </div>
+        </div>
+
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">             
+                <div class="col-4 col-sm-2 offset-1 order-md-2">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Browse Collections</a></li>
+                        <li><a href="#">About Book King</a></li>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">My Orders</a></li>
+                    </ul>
+                </div>
+                <div class="col-4 col-sm-2 order-md-4">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Sell With Us</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Customer Support</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-4 offset-3 offset-md-0 order-last order-md-6  ">
+                    <div class="input-group flex-nowrap">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="addon-wrapping">
+                            <i class="fa fa-envelope"></i>
+                          </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="addon-wrapping">
+                      </div>
+
+                </div>
+<!--the below col- class somehow fixes the xs view, any numbers break it and so does without the "-" -->
+                <div class="col-1 col-sm text-right mr-5 order-9 ">
+                	<h5>Social</h5>
+                    <a href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
+                    <a href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+                    <a href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                    <a href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+<!-- jQuery must come first, then Popper.j  s, then the Bootstrap JavaScript plugins.-->
+<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+
 </html>
+
+<!-- 
+Grid classes: 
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>NuCamp</h1>
+                <h2>a better way to camp</h2>
+            </div>
+        </div>
+    </div>
+</header>
+
+Vertically Centering Row Content 
+<div class="row row-content align-items-center">
+    
+    
+    
+Sidebar structure - probably requires bootstrap 5 
+    
+    <div class="off-site-menu">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Menu</h3>
+            </div>
+            <ul class="list-unstyled components">
+                <div class="row">
+                    <li class="active"></li>
+                    <div class="col-2">
+                        <i class="fa fa-home fa-lg"></i>
+                    </div>
+                    <div class="col-2">
+                        <a href="index.html">Home</a>
+                    </div>
+                    </li>   
+                </div>
+
+
+
+-->
